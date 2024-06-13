@@ -30,8 +30,8 @@ export default function ContactInfo() {
 
           <div className="contact-phones">
             <h3>Контактні телефони:</h3>
-            <p>+123456789</p>
-            <p>+987654321</p>
+            <p>+38067452164</p>
+            <p>+38044596513</p>
           </div>
           <div className="social-media">
             <h3>Соціальні мережі:</h3>

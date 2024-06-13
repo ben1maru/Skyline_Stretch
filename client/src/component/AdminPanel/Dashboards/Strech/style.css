@@ -1,0 +1,121 @@
+.strech-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.strech-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.strech-header,
+.strech-table td {
+  padding: 8px;
+  border: 1px solid #000000;
+}
+
+.strech-header {
+  font-weight: bold;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.strech-edit-button {
+  background-color: #00ff22;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.strech-delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.strech-add-button {
+  margin-top: 10px;
+  background-color: #026e1d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.strech-input,
+.strech-select {
+  margin-bottom: 8px;
+  padding: 8px;
+  width: 95%;
+}
+
+.strech-submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.strech-select{
+  width: 305px;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.notification {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.notification.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

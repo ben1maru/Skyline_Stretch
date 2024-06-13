@@ -1,0 +1,167 @@
+.catalog-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-menu {
+  display: none;
+  background-color: #005f10;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.filter-panel {
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.filter-panel.open {
+  transform: translateX(0);
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.price-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.catalog {
+  margin-left: 270px; /* Adjust according to the filter panel width */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+  width: calc(25% - 40px); /* Adjust card width for smaller size */
+  box-sizing: border-box;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 10px 0;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+}
+
+.card-content p {
+  margin: 10px 0;
+}
+
+.card-content button {
+  background-color: #0b5f1e;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.card-content button:hover {
+  background-color: #036925;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #037228;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background-color: #04361a;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .catalog-container {
+    flex-direction: column;
+  }
+  .price-inputs {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.filter-group select, .filter-group input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+  .burger-menu {
+    display: block;
+  }
+
+  .filter-panel {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .filter-panel.open {
+    transform: translateX(0);
+  }
+
+  .catalog {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
