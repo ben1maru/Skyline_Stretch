@@ -68,7 +68,7 @@ const Application = () => {
       setEditingApplication(null);
       showNotification("Статус заявки успішно оновлено!", true);
     } catch (error) {
-      console.error('Error updating application status:', error);
+      console.error('Помилка оновлення:', error);
       showNotification("Помилка при оновленні статусу заявки!", false);
     }
   };
