@@ -21,7 +21,7 @@ class AdminAuth extends Component {
     const { email, password } = this.state;
 
     try {
-      await axios.post('http://localhost:8081/api/auth/login', { email, password });
+      await axios.post('https://skyline-stretch-server.onrender.com/api/auth/login', { email, password });
         
         // Перенаправлення адміністратора на головну сторінку адміністрування
         window.location.href = '/admin/dashboard';

@@ -26,7 +26,7 @@ const Strech = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/strech/strech")
+      .get("https://skyline-stretch-server.onrender.com/api/strech/strech")
       .then((response) => {
         setStreches(response.data);
       })
@@ -35,7 +35,7 @@ const Strech = () => {
       });
 
     axios
-      .get("http://localhost:8081/api/color/color")
+      .get("https://skyline-stretch-server.onrender.com/api/color/color")
       .then((response) => {
         setColors(response.data);
       })
@@ -44,7 +44,7 @@ const Strech = () => {
       });
 
     axios
-      .get("http://localhost:8081/api/coating/coating")
+      .get("https://skyline-stretch-server.onrender.com/api/coating/coating")
       .then((response) => {
         setCoatings(response.data);
       })
@@ -68,7 +68,7 @@ const Strech = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8081/api/strech/strech/${id}`)
+      .delete(`https://skyline-stretch-server.onrender.com/api/strech/strech/${id}`)
       .then(() => {
         setStreches((prevStreches) =>
           prevStreches.filter((strech) => strech.id !== id)
@@ -92,7 +92,7 @@ const Strech = () => {
 
     axios
       .put(
-        `http://localhost:8081/api/strech/strech/${editingStrech.id}`,
+        `https://skyline-stretch-server.onrender.com/api/strech/strech/${editingStrech.id}`,
         strechData
       )
       .then((response) => {
@@ -130,7 +130,7 @@ const Strech = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8081/api/strech/strech", newStrech)
+      .post("https://skyline-stretch-server.onrender.com/api/strech/strech", newStrech)
       .then((response) => {
         setStreches([...streches, response.data]);
         setNewStrech({

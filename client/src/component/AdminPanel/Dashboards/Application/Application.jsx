@@ -17,7 +17,7 @@ const Application = () => {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/api/application/application');
+        const response = await axios.get('https://skyline-stretch-server.onrender.com/api/application/application');
         setApplications(response.data);
       } catch (error) {
         console.error('Error fetching applications:', error);
@@ -30,7 +30,7 @@ const Application = () => {
   useEffect(() => {
     const fetchStatuses = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/api/application/status');
+        const response = await axios.get('https://skyline-stretch-server.onrender.com/api/application/status');
         setStatuses(response.data);
       } catch (error) {
         console.error('Error fetching statuses:', error);
@@ -62,7 +62,7 @@ const Application = () => {
   // Handle save status
   const handleSaveStatus = async () => {
     try {
-      await axios.put(`http://localhost:8081/api/application/application/${editingApplication.id}`, { id_status: editingApplication.id_status });
+      await axios.put(`https://skyline-stretch-server.onrender.com/api/application/application/${editingApplication.id}`, { id_status: editingApplication.id_status });
       const updatedStatus = statuses.find(status => status.id === parseInt(editingApplication.id_status, 10));
       setApplications(applications.map(app => (app.id === editingApplication.id ? { ...app, id_status: editingApplication.id_status, status_name: updatedStatus ? updatedStatus.name : app.status_name } : app)));
       setEditingApplication(null);

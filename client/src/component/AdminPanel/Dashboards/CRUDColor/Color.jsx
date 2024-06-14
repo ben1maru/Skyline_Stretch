@@ -20,7 +20,7 @@ const Color = () => {
   useEffect(() => {
     const fetchColors = async () => {
       try {
-        const response = await axios.get(`http://localhost:8081/api/color/color`);
+        const response = await axios.get(`https://skyline-stretch-server.onrender.com/api/color/color`);
         setColors(response.data);
       } catch (error) {
         console.error('Error fetching colors:', error);
@@ -71,7 +71,7 @@ const Color = () => {
   const handleUpdateColor = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:8081/api/color/color/${editingColor.id}`, editingColor);
+      const response = await axios.put(`https://skyline-stretch-server.onrender.com/api/color/color/${editingColor.id}`, editingColor);
       console.log("Color updated successfully:", response.data);
       setColors(colors.map(color => (color.id === editingColor.id ? response.data : color)));
       setEditingColor(null);
@@ -85,7 +85,7 @@ const Color = () => {
   // Handle deletion of color
   const handleDeleteColor = async (id) => {
     try {
-      await axios.delete(`http://localhost:8081/api/color/color/${id}`);
+      await axios.delete(`https://skyline-stretch-server.onrender.com/api/color/color/${id}`);
       console.log("Color deleted successfully:", id);
       setColors(colors.filter(color => color.id !== id));
       showNotification("Колір успішно видалений!", true);

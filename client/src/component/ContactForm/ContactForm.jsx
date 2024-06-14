@@ -22,7 +22,7 @@ const ContactForm = ({ idStrech }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8081/api/application/application', {
+      await axios.post('https://skyline-stretch-server.onrender.com/api/application/application', {
         phone_number: formData.phone_number,
         email: formData.email,
         text: formData.text,

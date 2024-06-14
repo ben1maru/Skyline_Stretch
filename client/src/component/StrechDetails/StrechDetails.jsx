@@ -12,7 +12,7 @@ export default function StrechDetails() {
   const [strech, setStrech] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:8081/api/strech/strech/${id}`)
+    axios.get(`https://skyline-stretch-server.onrender.com/api/strech/strech/${id}`)
       .then(response => {
         setStrech(response.data);
       })

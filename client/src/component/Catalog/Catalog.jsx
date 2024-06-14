@@ -18,7 +18,7 @@ export default function Catalog() {
   const itemsPerPage = 8; // Changed to 8 items per page
 
   useEffect(() => {
-    axios.get('http://localhost:8081/api/strech/strechCards')
+    axios.get('https://skyline-stretch-server.onrender.com/api/strech/strechCards')
       .then(response => {
         setStreches(response.data);
         setFilteredStreches(response.data);
@@ -27,7 +27,7 @@ export default function Catalog() {
         console.error("There was an error fetching the streches!", error);
       });
 
-    axios.get('http://localhost:8081/api/color/color')
+    axios.get('https://skyline-stretch-server.onrender.com/api/color/color')
       .then(response => {
         setColors(response.data);
       })
@@ -35,7 +35,7 @@ export default function Catalog() {
         console.error("There was an error fetching the colors!", error);
       });
 
-    axios.get('http://localhost:8081/api/coating/coating')
+    axios.get('https://skyline-stretch-server.onrender.com/api/coating/coating')
       .then(response => {
         setCoatings(response.data);
       })
